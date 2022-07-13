@@ -35,3 +35,54 @@ iconData.forEach((thisData) => {
         navName.appendChild(newIconContainer);
     }
 });
+
+let allIconsDiv = document.querySelectorAll(`.${parentClass}`);
+
+allIconsDiv.forEach((thisIconDiv, index) => {
+    let thisIcon = thisIconDiv.querySelector(".icon");
+
+    addDataAttribute(thisIconDiv);
+    thisIconDiv.addEventListener("click", styleIcon);
+
+    function styleIcon() {
+        changeBgColor();
+        makeIconSolid(thisIcon);
+
+        function changeBgColor() {
+            let thisIconColor = iconData[index].color;
+            let bodyElement = document.querySelector("body");
+
+            bodyElement.style.setProperty("--bg", `${thisIconColor}`);
+        }
+
+        function makeIconSolid(iconName) {
+            resetAllIcons();
+            addClassesToThisIcon();
+    
+            function resetAllIcons() {
+                allIconsDiv.forEach((thisDiv) => {
+                    let thisSolidIcon = thisDiv.querySelector(".icon");
+    
+                    makeIconOutlined(thisSolidIcon);
+                    thisDiv.classList.remove("active");
+                    
+                    function makeIconOutlined(iconName) {
+                        iconName.classList.remove(`${iconStyleArray[1]}`);
+                        iconName.classList.add(`${iconStyleArray[0]}`);
+                    }
+                });
+            }
+
+            function addClassesToThisIcon() {
+                thisIconDiv.classList.add("active");
+                iconName.classList.add(`${iconStyleArray[1]}`);
+            }
+        }
+    }
+
+    function addDataAttribute(iconName) {
+        let thisTitle = iconData[index].text;
+        iconName.setAttribute("data-text", `${thisTitle}`);
+    }
+});
+
