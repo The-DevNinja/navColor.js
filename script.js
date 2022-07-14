@@ -1,4 +1,20 @@
 function createNav(arrayIcons, options) {
+    addLibraries();
+
+    function addLibraries() {
+        let CSSlibraries= ["https://cdn.jsdelivr.net/gh/The-DevNinja/js-navbar-library/style.min.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"];
+
+        CSSlibraries.forEach((library) => {
+            let linkTag = document.createElement("link");
+
+            linkTag.rel = "stylesheet";
+            linkTag.type = "text/css";
+            linkTag.href = library;
+
+            document.querySelector("head").appendChild(linkTag);
+        });
+    };
+
     let bodyElement = document.querySelector("body");
     let navContainer = setNavElement();
 
