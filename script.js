@@ -1,7 +1,3 @@
-createNav(iconData, {
-    "navElement": "#nav"
-});
-
 function createNav(arrayIcons, options) {
     let bodyElement = document.querySelector("body");
     let navContainer = setNavElement();
@@ -18,28 +14,37 @@ function createNav(arrayIcons, options) {
             createNavWithOptions(options);
 
             function createNavWithOptions(options) {
-                element = document.createElement("nav");
-                bodyElement.appendChild(element);
-                
+                checkIfNavExist();
+
                 let firstLetter = options.navElement.charAt(0);
                 
                 let isID = firstLetter == "#";
                 let isClass = firstLetter == ".";
-
+                
                 if(isID) {
                     element.id = options.navElement.replace("#", "");
                 } else if(isClass) {
-                    element.className.add(options.navElement.replace(".", ""));
+                    element.classList.add(options.navElement.replace(".", ""));
                 } else {
                     element.id = options.navElement; 
+                }
+
+                bodyElement.appendChild(element);
+
+                function checkIfNavExist() {
+                    if(!document.querySelector("nav")) {
+                        element = document.createElement("nav");
+                    } else {
+                        element = document.querySelector("nav");
+                    }
                 }
             }
         } else {
             element = document.querySelector("nav");
 
             if(!element) { 
-
                 createNormalNav();
+                
                 function createNormalNav() {
                     element = document.createElement("nav");
                     bodyElement.appendChild(element);
@@ -52,7 +57,7 @@ function createNav(arrayIcons, options) {
     
     let parentClass = "icon-div";
     
-    iconData.forEach((thisData) => {
+    arrayIcons.forEach((thisData) => {
         let newIconContainer;
         let thisIconName = thisData.iconName;
     
@@ -95,7 +100,7 @@ function createNav(arrayIcons, options) {
             makeIconSolid(thisIcon);
     
             function changeBgColor() {
-                let thisIconColor = iconData[index].color;
+                let thisIconColor = arrayIcons[index].color;
                 
     
                 bodyElement.style.setProperty("--bg", `${thisIconColor}`);
@@ -127,7 +132,7 @@ function createNav(arrayIcons, options) {
         }
     
         function addDataAttribute(iconName) {
-            let thisTitle = iconData[index].text;
+            let thisTitle = arrayIcons[index].text;
             iconName.setAttribute("data-text", `${thisTitle}`);
         }
     });
