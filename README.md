@@ -1,10 +1,11 @@
 # navColor.js
 
-![ezgif com-gif-maker (31)](https://user-images.githubusercontent.com/94779582/179071442-6f6f07cd-1c5e-41ab-8d88-9ac2f564941b.gif)
+![the dev ninja navColor.js](https://user-images.githubusercontent.com/94779582/179071442-6f6f07cd-1c5e-41ab-8d88-9ac2f564941b.gif)
 
 ## how to install it
 
 just copy this CDN link to your `<head>` tag!
+
 ```html
 <script src="https://cdn.jsdelivr.net/gh/The-DevNinja/navColor.js/script.min.js" defer></script>
 ```
@@ -13,15 +14,18 @@ just copy this CDN link to your `<head>` tag!
 > otherway, you need to put the script before calling the function, for not getting bugs :)
 
 ---
+
 ## how to configure
+
 when you pasted the code above in your html file.
 
 ### where should I paste the *function()*?
+
 you need to add this function to your `<script>` tag, or in your `.js` javascript file.
 
 ### what is the name of the function?
-the function is `createNav();`
 
+the function is `createNav();`
 
 ### what is the order of the parameters?
 
@@ -36,13 +40,14 @@ createNav([{...}, {...}, {...}], options);
 
 #### what I need to put inside the object `{...}`?
 
-the object need **3** parameters: 
+the object need **3** parameters:
 
 > the order of parameters **not** affect the functionality)
 
 #### 1 `iconName` first parameter
 
 something like this:
+
 ```javascript
 {
     iconName: "fa-user",
@@ -59,12 +64,14 @@ so you need to write a *string* containing the **class** of that icon.
 #### 2 `color` second parameter
 
 the color need to be a *string* containing one of the following values:
+
 1. `hex`,                   for example: `#00FFFF` (remember to add `#`)
 2. or a `rgb()`,            for example: `rgb(0,0, 255)`
 3. or normal color value    for example: `cyan`
 4. or any other valid css color value (but in string format)
 
 something like this:
+
 ```javascript
 {
     color: "cyan",
@@ -79,6 +86,7 @@ this is the text that will be displayed `onclick` of a icon.
 also this need to be a *string*
 
 something like this:
+
 ```javascript
 {
     text: "hello world!",
@@ -86,9 +94,10 @@ something like this:
 }
 ```
 
-### example code object:
+### example code object
 
 this is a example containing 3 objects in array, without any options.
+
 ```javascript
 createNav([{    // first 
         "text": "homepage page",
@@ -141,6 +150,7 @@ the options aren't important to add, use them only when you need more custum beh
 ##### how to add a ID?
 
 you need to write this, with a *string* containing your choosed class, <br> make sure that there is `#` before the name of the id
+
 ```javascript
 {
     navElement: "#myId",
@@ -151,9 +161,11 @@ you need to write this, with a *string* containing your choosed class, <br> make
 ```
 
 > I suggest this solution than the class solution, because a ID can be added only one time, so is unique.
+
 ##### how to add a CLASS?
 
 you need to write this, with a *string* containing your choosed class, <br> make sure that there is `.` before the name of the class
+
 ```javascript
 {
     navElement: ".myClass",
@@ -163,8 +175,8 @@ you need to write this, with a *string* containing your choosed class, <br> make
 // output: <nav class="myClass">...</nav>
 ```
 
-
 ### you can disable my CSS file, to write your own custum CSS
+
 this need a `boolean` value like `false` or `true`
 
 by default is setted to `false`.
@@ -183,17 +195,17 @@ this make you **only** install the **script** for creating `html` tags,
 > instead if you want most parts of my CSS, but not all,
 <br> you can modify only the parts you want with your css file and adding `!important` if it didn't work (make sure to use also devtools).
 
-##### list of css selector you can use for custumizable UI.
+##### list of css selector you can use for custumizable UI
 
-| name of class | description | 
+| name of class | description |
 |---|---|
 | `.icon-div` | the parent-div that will contain <br> the `<i>` tag of the icon fontawesome |  
 | `.icon-div.active`  | you can use this selector for adding some effect after the click of a icon |  
 | `.icon`   | is the `<i>` tag itself, which will be the icon itself  |
 
-##### list of css variables you can use for custumizable UI.
+##### list of css variables you can use for custumizable UI
 
-| name of class | description | 
+| name of class | description |
 |---|---|
 | `--bg` | you can use this css variable in your css code <br> to color correctly and dinamically anything by using `var(--bg);` |
 | `[data-text]` | this isn't a css variables but still helpful, <br>you can use this `data-text` html attribute in your pseudo-elements (`::before`, `::after`, etc...) <br> with the `attr(data-text)` css function |
