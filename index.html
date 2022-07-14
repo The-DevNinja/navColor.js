@@ -16,8 +16,10 @@
 <body>
     <nav></nav>
 
-    <script>
-        let iconData = [{
+    <script src="./script.js"></script>
+<script>
+    createNav([
+        {
             "text": "home",
             "iconName": "fa-building",
             "color": "red"
@@ -25,19 +27,12 @@
             "text": "file",
             "iconName": "fa-file-code",
             "color": "blue"
-        }, {
-            "text": "notification",
-            "iconName": "fa-bell",
-            "color": "orange"
-        }, {
-            "text": "user",
-            "iconName": "fa-user",
-            "color": "green"
-        }
-    ];
-    </script>
+        }], {
+    "navElement": ".the-dev-ninja"
+});
+</script>
 
-    <script src="./script.js"></script>
+  
 </body>
 
 </html>
