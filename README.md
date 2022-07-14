@@ -17,8 +17,6 @@ just copy this CDN link to your `<head>` tag!
 
 ## how to configure
 
-when you pasted the code above in your html file.
-
 ### where should I paste the *function()*?
 
 you need to add this function to your `<script>` tag, or in your `.js` javascript file.
