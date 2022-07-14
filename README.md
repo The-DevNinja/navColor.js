@@ -1,6 +1,6 @@
 # navColor.js
 
-![the dev ninja navColor.js](https://user-images.githubusercontent.com/94779582/179071442-6f6f07cd-1c5e-41ab-8d88-9ac2f564941b.gif)
+![ezgif com-gif-maker (31)](https://user-images.githubusercontent.com/94779582/179071442-6f6f07cd-1c5e-41ab-8d88-9ac2f564941b.gif)
 
 ## how to install it
 
@@ -15,6 +15,26 @@ just copy this CDN link to your `<head>` tag!
 
 ---
 
+- [navColor.js](#navcolorjs)
+  - [how to install it](#how-to-install-it)
+  - [how to configure](#how-to-configure)
+    - [where should I paste the *function()*?](#where-should-i-paste-the-function)
+    - [what is the name of the function?](#what-is-the-name-of-the-function)
+    - [what is the order of the parameters?](#what-is-the-order-of-the-parameters)
+      - [what I need to put inside the object `{...}`?](#what-i-need-to-put-inside-the-object-)
+      - [1 `iconName` first parameter](#1-iconname-first-parameter)
+      - [2 `color` second parameter](#2-color-second-parameter)
+      - [3 `text` third parameter](#3-text-third-parameter)
+    - [example code object](#example-code-object)
+    - [`options` second parameters](#options-second-parameters)
+      - [you can add a `<nav>` with the `ID` or `class` you want?](#you-can-add-a-nav-with-the-id-or-class-you-want)
+        - [how to add a ID?](#how-to-add-a-id)
+        - [how to add a CLASS?](#how-to-add-a-class)
+    - [you can disable my CSS file, to write your own custum CSS](#you-can-disable-my-css-file-to-write-your-own-custum-css)
+        - [list of css selector you can use for custumizable UI](#list-of-css-selector-you-can-use-for-custumizable-ui)
+        - [list of css variables you can use for custumizable UI](#list-of-css-variables-you-can-use-for-custumizable-ui)
+
+---
 ## how to configure
 
 ### where should I paste the *function()*?
