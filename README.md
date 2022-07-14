@@ -30,7 +30,7 @@ just copy this CDN link to your `<head>` tag!
       - [you can add a `<nav>` with the `ID` or `class` you want?](#you-can-add-a-nav-with-the-id-or-class-you-want)
         - [how to add a ID?](#how-to-add-a-id)
         - [how to add a CLASS?](#how-to-add-a-class)
-    - [you can disable my CSS file, to write your own custum CSS](#you-can-disable-my-css-file-to-write-your-own-custum-css)
+      - [you can disable my CSS file, to write your own custum CSS](#you-can-disable-my-css-file-to-write-your-own-custum-css)
         - [list of css selector you can use for custumizable UI](#list-of-css-selector-you-can-use-for-custumizable-ui)
         - [list of css variables you can use for custumizable UI](#list-of-css-variables-you-can-use-for-custumizable-ui)
 
@@ -193,7 +193,7 @@ you need to write this, with a *string* containing your choosed class, <br> make
 // output: <nav class="myClass">...</nav>
 ```
 
-### you can disable my CSS file, to write your own custum CSS
+#### you can disable my CSS file, to write your own custum CSS
 
 this need a `boolean` value like `false` or `true`
 
