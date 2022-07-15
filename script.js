@@ -2,7 +2,18 @@ function createNav(arrayIcons, options) {
     addLibraries();
 
     function addLibraries() {
-        let CSSlibraries= ["https://cdn.jsdelivr.net/gh/The-DevNinja/js-navbar-library/style.min.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"];
+        let CSSlibraries;
+
+        if(options.isHtmlOnly == true) {
+            CSSlibraries = Object.values({
+                "FontAwesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            });
+        } else {
+            CSSlibraries = Object.values({
+                "myCSS": "https://cdn.jsdelivr.net/gh/The-DevNinja/js-navbar-library/style.min.css",
+                "FontAwesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            });
+        }
 
         CSSlibraries.forEach((library) => {
             let linkTag = document.createElement("link");
