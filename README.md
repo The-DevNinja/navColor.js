@@ -15,6 +15,14 @@ just copy this CDN link to your `<head>` tag!
 
 ---
 
+| YouTube Video Tutorial        |      Online Website                             |
+|------------------------------ | ----------------------------------------------- |
+| https://youtu.be/KxA1_yTOFHw  | https://the-devninja.github.io/navColor.js/     |
+
+---
+
+### table of contents:
+
 - [navColor.js](#navcolorjs)
   - [how to install it](#how-to-install-it)
   - [how to configure](#how-to-configure)
