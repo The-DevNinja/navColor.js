@@ -10,7 +10,7 @@ function createNav(arrayIcons, options) {
             });
         } else {
             CSSlibraries = Object.values({
-                "myCSS": "https://cdn.jsdelivr.net/gh/The-DevNinja/js-navbar-library/style.min.css",
+                "myCSS": "https://cdn.jsdelivr.net/gh/The-DevNinja/navColor.js/style.min.css",
                 "FontAwesome": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             });
         }
