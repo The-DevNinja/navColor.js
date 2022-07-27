@@ -17,7 +17,7 @@ just copy this CDN link to your `<head>` tag!
 
 | YouTube Video Tutorial        |      Online Website                             |
 |------------------------------ | ----------------------------------------------- |
-| https://youtu.be/KxA1_yTOFHw  | https://the-devninja.github.io/navColor.js/     |
+| https://youtu.be/KxA1_yTOFHw  | https://navcolorjs.vercel.app/                  |
 
 ---
 
